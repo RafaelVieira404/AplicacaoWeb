@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Catálogo de Filmes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/items.js" defer></script>
+</head>
+<body class="bg-black text-white min-h-screen p-8">
+  <div class="max-w-5xl mx-auto">
+    <h1 class="text-3xl font-bold mb-6 text-center text-red-600">MinhaLista.com</h1>
+
+    <form id="itemForm" class="bg-neutral-900 rounded-lg shadow p-6 mb-6 flex flex-wrap gap-4 items-end border border-red-600">
+      <div class="flex-1 min-w-[200px]">
+        <label class="block mb-1 font-semibold text-gray-300">🎞️ Título do Filme</label>
+        <input id="title" placeholder="Ex: O Poderoso Chefão" class="w-full border border-gray-700 bg-black text-white p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500">
+      </div>
+      <div class="flex-1 min-w-[200px]">
+        <label class="block mb-1 font-semibold text-gray-300">📽️ Descrição</label>
+        <input id="description" placeholder="Breve sinopse..." class="w-full border border-gray-700 bg-black text-white p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500">
+      </div>
+      <div>
+        <label class="block mb-1 font-semibold text-gray-300">🎬 Status</label>
+        <select id="status" class="w-full border border-gray-700 bg-black text-white p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500">
+          <option value="Não Assistido">Não Assistido</option>
+          <option value="Assistido">Assistido</option>
+          <option value="Assistindo">Assistindo</option>
+        </select>
+      </div>
+      <button class="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-md font-semibold transition">Adicionar</button>
+    </form>
+
+    <div class="mb-4 flex gap-4 items-center">
+      <label class="font-semibold text-gray-300">Filtrar por status:</label>
+      <select id="filterStatus" class="border border-gray-700 bg-black text-white p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500">
+        <option value="todos">Todos</option>
+        <option value="Não Assistido">Não Assistido</option>
+        <option value="Assistido">Assistido</option>
+        <option value="Assistindo">Assistindo</option>
+      </select>
+    </div>
+
+    <ul id="itemList" class="space-y-4"></ul>
+  </div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Catálogo de Filmes 🎬</title>
+  <script src="js/auth.js" defer></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex items-center justify-center h-screen bg-black text-white">
+  <form class="bg-neutral-900 p-8 rounded-xl shadow-xl w-96 border border-red-600" id="loginForm">
+    <h2 class="text-2xl font-bold mb-6 text-center text-red-600">🎟️ Acesso ao Catálogo</h2>
+    <input type="text" id="username" placeholder="Usuário" class="w-full border border-gray-600 bg-black text-white p-3 mb-4 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500">
+    <input type="password" id="password" placeholder="Senha" class="w-full border border-gray-600 bg-black text-white p-3 mb-4 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500">
+    <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-md font-semibold transition">Entrar</button>
+    <p id="error" class="text-red-400 text-sm mt-4 hidden text-center">Usuário ou senha incorretos</p>
+  </form>
+</body>
+</html>
